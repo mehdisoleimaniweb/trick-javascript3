@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec">
+        <h1>CSS Responsive Animated Accordion</h1>
+        <ul class="p-0 mt-5">
+            <li data-name="off">
+                <h3>First Accordion heading</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur Testadipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
+            </li>
+            <li data-name="off">
+                <h3>First Accordion heading</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur Testadipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
+            </li>
+            <li data-name="off">
+                <h3>Third Accordion heading</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur Testadipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
+            </li>
+        </ul>
+    </section>
+    <script>
+        let _p =document.querySelectorAll('.sec p')
+        let _li =document.querySelectorAll('.sec li')
+        _p.forEach((val)=>{
+            let acc = val.clientHeight
+            val.setAttribute('data-height',acc)
+            val.style.height=0
+        })
+        _li.forEach((val)=>{
+            val.addEventListener('click',function(){
+                let _child=val.children
+                if( 
+                    (val.getAttribute('data-name')) == 'off'
+                ) {
+                    acc = _child[1].getAttribute('data-height')
+                    _child[1].style.height=acc+'px'
+                    val.setAttribute('data-name','on')
+                }else{
+                    _child[1].style.height=0
+                    val.setAttribute('data-name','off')
+                }
+            })
+        })
+    </script>
+</body>
+</html>

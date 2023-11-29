@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.sec {
+  width: 70%;
+}
+.sec h1 {
+  display: flex;
+  justify-content: center;
+}
+.sec > ul {
+  width: 100%;
+}
+.sec > ul > li {
+  border: 1px solid white;
+  list-style-type: none;
+  cursor: pointer;
+}
+.sec > ul > li > h3 {
+  background-color: #38cc70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.sec > ul > li > p {
+  overflow: hidden;
+  transition: 1s;
+  font-family: Arial;
+}/*# sourceMappingURL=master.css.map */
